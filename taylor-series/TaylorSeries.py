@@ -1,8 +1,17 @@
+import math
+
 class TaylorSeries(object):
     def __init__(self, num_terms: int):
         self.num_terms = num_terms
 
 class Exponential(TaylorSeries):
+    def compute_series(self, x: float) -> float:
+        approximation = 0
+        for index in range(self.num_terms):
+            numerator = x ** index
+            denominator = math.factorial(index)
+            approximation += (numerator / denominator)
+        return approximation
 
 class Sine(TaylorSeries):
     def compute_series(self, x: float) -> float:
