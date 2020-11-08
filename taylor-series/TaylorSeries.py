@@ -6,6 +6,15 @@ class TaylorSeries(object):
 
 
 class Cosine(TaylorSeries):
+    def compute_series(self, x: float) -> float:
+        x = math.radians(x)
+        approximation = 0
+        for index in range(self.num_terms):
+            coefficient = ((-1) ** index)
+            numerator = x ** (2 * index)
+            denominator = math.factorial(2 * index)
+            approximation += (coefficient * (numerator / denominator))
+        return approximation
 
 class Exponential(TaylorSeries):
     def compute_series(self, x: float) -> float:
