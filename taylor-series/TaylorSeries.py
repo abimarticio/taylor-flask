@@ -4,6 +4,9 @@ class TaylorSeries(object):
     def __init__(self, num_terms: int):
         self.num_terms = num_terms
 
+
+class Cosine(TaylorSeries):
+
 class Exponential(TaylorSeries):
     def compute_series(self, x: float) -> float:
         approximation = 0
