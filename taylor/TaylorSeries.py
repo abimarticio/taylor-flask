@@ -8,6 +8,8 @@ class TaylorSeries(object):
     def compute_series(self, x: float) -> float:
         raise NotImplementedError
 
+    def __call__(self, x: float) -> float:
+        return self.compute_series(x)
 
 class Cosine(TaylorSeries):
     def compute_series(self, x: float) -> float:
