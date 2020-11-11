@@ -1,5 +1,5 @@
 from flask import Flask, request
-from taylor import Cosine, Exponential
+from taylor import Cosine, Exponential, Sine
 
 app = Flask(__name__)
 
@@ -16,6 +16,13 @@ def taylor_exponential():
     num_terms = request.args.get("num_terms", default=None, type=int)
     exp = Exponential(num_terms)
     return f"exp({num_terms}) = {exp(num_terms)}"
+
+
+@app.route("/taylor-series/sine", methods=["GET"])
+def taylor_sine():
+    num_terms = request.args.get("num_terms", default=None, type=int)
+    sin = Sine(num_terms)
+    return f"sin({num_terms}) = {sin(num_terms)}"
 
 
 if __name__ == "__main__":
