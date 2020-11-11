@@ -11,6 +11,7 @@ class TaylorSeries(object):
     def __call__(self, x: float) -> float:
         return self.compute_series(x)
 
+
 class Cosine(TaylorSeries):
     def compute_series(self, x: float) -> float:
         x = math.radians(x)
