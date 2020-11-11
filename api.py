@@ -1,8 +1,14 @@
 from flask import Flask, request
-
+from taylor import Cosine
 
 app = Flask(__name__)
 
+
+@app.route("/taylor-series/cosine", methods=["GET"])
+def taylor_cosine():
+    num_terms = request.args.get("num_terms", default=None, type=int)
+    cos = Cosine(num_terms)
+    return f"cos({num_terms}) = {cos(num_terms)}"
 
 
 if __name__ == "__main__":
