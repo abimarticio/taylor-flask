@@ -31,6 +31,11 @@ export FLASK_APP=api.py
 python -m flask run
 ```
 
+Or simply use python command
+```
+python api.py
+```
+
 And head over to 
 ```
 http//127.0.0.1:5000/taylor-series/sine?num_terms=10&value=60
