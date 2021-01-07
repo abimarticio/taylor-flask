@@ -54,6 +54,19 @@ class Cosine(TaylorSeries):
 
 class Exponential(TaylorSeries):
     def compute_series(self, x: float) -> float:
+        """ 
+        Computes Taylor Series for Exponential.
+
+        Parameter
+        ---------
+        x: float
+            The value to compute.
+
+        Returns
+        -------
+        x: float
+            The Taylor approximation in Exponential.
+        """
         approximation = 0
         for index in range(self.num_terms):
             numerator = x ** index
