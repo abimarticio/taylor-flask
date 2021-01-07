@@ -21,6 +21,21 @@ app = Flask(__name__)
 
 @app.route("/taylor-series/cosine", methods=["GET"])
 def taylor_cosine():
+    """ 
+    GET request for Taylor Series in Cosine.
+
+    Request Parameters
+    ---------
+    num_terms: int
+        The number of terms to compute.
+    value: int
+        The value to compute.
+
+    Returns
+    -------
+    string
+        The result of Taylor approximation in Cosine.
+    """
     num_terms = request.args.get("num_terms", default=None, type=int)
     value = request.args.get("value", default=None, type=int)
     cos = Cosine(num_terms)
