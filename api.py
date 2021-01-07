@@ -44,6 +44,21 @@ def taylor_cosine():
 
 @app.route("/taylor-series/exponential", methods=["GET"])
 def taylor_exponential():
+    """ 
+    GET request for Taylor Series in Exponential.
+
+    Request Parameters
+    ---------
+    num_terms: int
+        The number of terms to compute.
+    value: int
+        The value to compute.
+
+    Returns
+    -------
+    string
+        The result of Taylor approximation in Exponential.
+    """
     num_terms = request.args.get("num_terms", default=None, type=int)
     value = request.args.get("value", default=None, type=int)
     exp = Exponential(num_terms)
