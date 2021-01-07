@@ -77,6 +77,19 @@ class Exponential(TaylorSeries):
 
 class Sine(TaylorSeries):
     def compute_series(self, x: float) -> float:
+        """ 
+        Computes Taylor Series for Sine.
+
+        Parameter
+        ---------
+        x: float
+            The value to compute.
+
+        Returns
+        -------
+        x: float
+            The Taylor approximation in Sine.
+        """
         x = math.radians(x)
         approximation = 0
         for index in range(self.num_terms):
