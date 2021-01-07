@@ -67,6 +67,21 @@ def taylor_exponential():
 
 @app.route("/taylor-series/sine", methods=["GET"])
 def taylor_sine():
+    """ 
+    GET request for Taylor Series in Sine.
+
+    Request Parameters
+    ---------
+    num_terms: int
+        The number of terms to compute.
+    value: int
+        The value to compute.
+
+    Returns
+    -------
+    string
+        The result of Taylor approximation in Sine.
+    """
     num_terms = request.args.get("num_terms", default=None, type=int)
     value = request.args.get("value", default=None, type=int)
     sin = Sine(num_terms)
