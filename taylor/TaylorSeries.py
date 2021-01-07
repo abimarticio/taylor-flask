@@ -29,6 +29,19 @@ class TaylorSeries(object):
 
 class Cosine(TaylorSeries):
     def compute_series(self, x: float) -> float:
+        """ 
+        Computes Taylor Series for Cosine.
+
+        Parameter
+        ---------
+        x: float
+            The value to compute.
+
+        Returns
+        -------
+        x: float
+            The Taylor approximation in Cosine.
+        """
         x = math.radians(x)
         approximation = 0
         for index in range(self.num_terms):
