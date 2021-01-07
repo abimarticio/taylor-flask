@@ -40,3 +40,8 @@ And head over to
 ```
 http//127.0.0.1:5000/taylor-series/sine?num_terms=10&value=60
 ```
+
+We can also test out our API using curl command in the following manner
+```
+$ curl http//127.0.0.1:5000/taylor-series/sine?num_terms=10&value=60
+```
