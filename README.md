@@ -38,12 +38,17 @@ python api.py
 
 And head over to 
 ```
-http//127.0.0.1:5000/taylor-series/sine?num_terms=10&value=60
+http://127.0.0.1:5000/taylor-series/sine?num_terms=10&value=60
 ```
 
 We can also test out our API using curl command in the following manner
 ```
-$ curl http//127.0.0.1:5000/taylor-series/sine?num_terms=10&value=60
+$ curl http://127.0.0.1:5000/taylor-series/cosine?num_terms=10&value=60
+0.5000000021269722
+$ curl http://127.0.0.1:5000/taylor-series/exponential?num_terms=10&value=60
+3.2564429289571426E10
+$ curl http://127.0.0.1:5000/taylor-series/sine?num_terms=10&value=60
+0.8660253739422824
 ```
 
 ## License
